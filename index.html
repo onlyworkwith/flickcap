@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kalakar — Dashboard</title>
+  <meta name="description" content="Kalakar Neo-Brutalist video creator dashboard — manage projects, upload videos, and level up your cinematic editing skills." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Bebas+Neue&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top Bar -->
+  <header class="topbar" id="topbar">
+    <div class="topbar-left">
+      <span class="topbar-title">Reelbot Dashboard</span>
+    </div>
+    <div class="topbar-icons">
+      <button class="icon-btn" id="btn-bookmark" aria-label="Bookmarks"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></button>
+      <button class="icon-btn" id="btn-settings" aria-label="Settings"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button>
+      <button class="icon-btn avatar-btn" id="btn-avatar" aria-label="User profile">
+        <div class="avatar-dot"></div>
+      </button>
+    </div>
+  </header>
+
+  <div class="app-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <!-- Logo -->
+      <div class="sidebar-logo" id="sidebar-logo">
+        <div class="logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+        <span class="logo-text">Kalakar</span>
+      </div>
+
+      <!-- Nav -->
+      <nav class="sidebar-nav" id="sidebar-nav">
+        <a href="#" class="nav-item active" id="nav-dashboard">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="#" class="nav-item" id="nav-projects">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          <span>Recent Projects</span>
+        </a>
+        <a href="#" class="nav-item" id="nav-academy">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          <span>Academy</span>
+          <span class="badge-new">NEW</span>
+        </a>
+        <a href="#" class="nav-item" id="nav-subscription">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          <span>Manage Subscription</span>
+        </a>
+        <a href="#" class="nav-item" id="nav-support">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <span>Support</span>
+        </a>
+      </nav>
+
+      <!-- Free Tier -->
+      <div class="sidebar-tier" id="sidebar-tier">
+        <div class="tier-label">FREE TIER PLAN</div>
+        <div class="tier-rows">
+          <div class="tier-row">
+            <span class="tier-row-label">STORAGE</span>
+            <div class="tier-bar-wrap"><div class="tier-bar" style="width:60%"></div></div>
+          </div>
+          <div class="tier-row">
+            <span class="tier-row-label">RENDERING</span>
+            <div class="tier-bar-wrap"><div class="tier-bar" style="width:35%"></div></div>
+          </div>
+          <div class="tier-row">
+            <span class="tier-row-label">TRANSCRIPTION</span>
+            <div class="tier-bar-wrap"><div class="tier-bar tier-bar-yellow" style="width:75%"></div></div>
+          </div>
+          <div class="tier-row">
+            <span class="tier-row-label">AI CREDITS</span>
+            <div class="tier-bar-wrap"><div class="tier-bar tier-bar-yellow" style="width:20%"></div></div>
+          </div>
+        </div>
+        <button class="upgrade-btn" id="btn-upgrade">UPGRADE</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content">
+      <!-- Top search bar -->
+      <div class="main-topbar" id="main-topbar">
+        <div class="search-bar" id="search-bar">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" placeholder="SEARCH ASSETS OR PROJECTS..." id="search-input" />
+          <kbd class="kbd-shortcut">⌘K</kbd>
+        </div>
+        <div class="topbar-actions">
+          <button class="icon-btn-dark" id="btn-notify" aria-label="Notifications">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          </button>
+          <button class="icon-btn-dark avatar-dark" id="btn-user" aria-label="User">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Upload Zone -->
+      <section class="upload-zone" id="upload-zone" aria-label="Video upload area">
+        <div class="upload-file-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+        </div>
+        <h2 class="upload-title">DROP YOUR VIDEO HERE OR CLICK TO UPLOAD</h2>
+        <p class="upload-sub">SUPPORTED FORMATS: MP4, MOV, WEBM (MAX 2GB)</p>
+        <input type="file" id="file-input" accept="video/*" hidden />
+      </section>
+
+      <!-- Bottom Grid: Recent Videos + Sidebar (Tutorial + Leaderboard) -->
+      <div class="content-grid">
+        <!-- Left: Recent Videos -->
+        <div class="content-left">
+          <!-- Recent Videos -->
+          <section class="section-block" id="section-recent">
+            <div class="section-header">
+              <div class="section-bar"></div>
+              <h3 class="section-title">RECENT VIDEOS</h3>
+              <a href="#" class="view-all" id="link-view-all">VIEW ALL LIBRARY</a>
+            </div>
+            <div class="video-grid" id="video-grid">
+              <!-- Card 1 -->
+              <div class="video-card" id="video-card-1">
+                <div class="video-thumb">
+                  <div class="thumb-bg thumb-1"></div>
+                  <div class="thumb-overlay"></div>
+                  <div class="thumb-badge badge-old">OLD</div>
+                  <button class="play-btn" id="play-btn-1" aria-label="Play Welcome to Kalakar">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  </button>
+                  <div class="thumb-info">
+                    <div class="thumb-title">WELCOME TO KALAKAR</div>
+                    <div class="thumb-meta">
+                      <span>01 OCT 2023</span>
+                      <span>1.2K VIEWS</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div class="video-card" id="video-card-2">
+                <div class="video-thumb">
+                  <div class="thumb-bg thumb-2"></div>
+                  <div class="thumb-overlay"></div>
+                  <div class="thumb-badge badge-old">OLD</div>
+                  <button class="play-btn" id="play-btn-2" aria-label="Play Neo-Brutalist Design Guide">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  </button>
+                  <div class="thumb-info">
+                    <div class="thumb-title">NEO-BRUTALIST DESIGN GUIDE</div>
+                    <div class="thumb-meta">
+                      <span>21 OCT 2023</span>
+                      <span>900 VIEWS</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 3 -->
+              <div class="video-card" id="video-card-3">
+                <div class="video-thumb">
+                  <div class="thumb-bg thumb-3"></div>
+                  <div class="thumb-overlay"></div>
+                  <div class="thumb-duration">44:11</div>
+                  <button class="play-btn" id="play-btn-3" aria-label="Play Advanced Color Grading">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  </button>
+                  <div class="thumb-info">
+                    <div class="thumb-title">ADVANCED COLOR GRADING</div>
+                    <div class="thumb-meta">
+                      <span>15 NOV 2023</span>
+                      <span>2.5K VIEWS</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Featured Tutorial -->
+          <section class="featured-tutorial" id="featured-tutorial">
+            <div class="tutorial-badge">NEXT TUTORIAL</div>
+            <div class="tutorial-inner">
+              <div class="tutorial-text">
+                <h2 class="tutorial-title">MASTERING THE ART OF<br>CINEMATIC EDITING</h2>
+                <p class="tutorial-desc">Learn how to create high-impact transitions and color grades that match our Neo-Brutalist design language. This course covers everything from basic cutting to advanced VFX.</p>
+                <button class="start-btn" id="btn-start-learning">START LEARNING</button>
+              </div>
+              <div class="tutorial-img-wrap">
+                <div class="tutorial-film-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="17" y1="7" x2="22" y2="7"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="2" y1="17" x2="7" y2="17"/></svg>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Right: Leaderboard -->
+        <aside class="content-right" id="content-right">
+          <section class="leaderboard-block" id="leaderboard-block">
+            <div class="leaderboard-header">
+              <h3 class="leaderboard-title">WEEKLY<br>LEADERBOARD</h3>
+              <p class="leaderboard-sub">JOIN THE TOP CREATORS</p>
+            </div>
+            <div class="leaderboard-list" id="leaderboard-list">
+              <div class="lb-row lb-row-1" id="lb-row-1">
+                <span class="lb-rank">01.</span>
+                <span class="lb-name">Alex_VFX</span>
+                <span class="lb-score">4.2k</span>
+              </div>
+              <div class="lb-row lb-row-2" id="lb-row-2">
+                <span class="lb-rank">02.</span>
+                <span class="lb-name">Creative_Soul</span>
+                <span class="lb-score">3.9k</span>
+              </div>
+              <div class="lb-row lb-row-3" id="lb-row-3">
+                <span class="lb-rank">03.</span>
+                <span class="lb-name">Brutal_Editor</span>
+                <span class="lb-score">3.1k</span>
+              </div>
+            </div>
+            <a href="#" class="view-rankings" id="link-rankings">VIEW RANKINGS →</a>
+          </section>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
